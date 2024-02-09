@@ -1,0 +1,36 @@
+<div class="card" style="margin-top: 8rem; width: 450px; margin-left: 35rem;">
+    <div class="card-body">
+        <form (ngSubmit)="onSubmit()" [formGroup]="signUpForm">
+            <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input type="text" class="form-control" formControlName="username" >
+                
+              </div>
+
+
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email">
+              
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputPassword2" class="form-label">Re-Enter Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword2" formControlName="repassword">
+              </div>
+          
+            <button type="submit" class="btn btn-primary " style="margin-left: 160px;">Submit</button>
+
+            <p style="text-align: center; margin-top: 20px;">
+              <span style="color: #888;">Already a Member</span>
+              <a routerLink="/signin" style="margin-left: 10px; color: #3498db; text-decoration: none; font-weight: bold;">
+                  Sign in here
+              </a>
+          </p>
+          </form>
+    </div>
+  </div>

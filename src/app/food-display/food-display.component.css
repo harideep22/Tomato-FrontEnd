@@ -1,0 +1,19 @@
+
+
+.food-container{
+    display: inline-flex;
+}
+
+.food-card{
+    width:220px;
+    height: 250px;
+    margin: 10px 10px;
+    background-color: #F8F9F9;
+}
+.food-name{
+    text-align: center;
+}
+
+.food-buttons{
+    display: flex;
+}

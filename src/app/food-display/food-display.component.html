@@ -1,0 +1,57 @@
+<section style="background-color: #eee;">
+  <div class="text-center container py-5">
+    <div class="row ">
+      <h4 class="mt-4 mb-5"><strong>Bestsellers</strong></h4>
+      <input type="text" [(ngModel)]="value" placeholder="Find Your Dish" style="width: 510px; margin-left: 50rem; margin-top: -4.77rem; height: 30px;">
+    </div>
+    <div class="row">
+      <ng-container *ngFor="let food of filteredFoods">
+        <div class="col-lg-4 col-md-12 mb-4">
+          <div class="card">
+            <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light" data-mdb-ripple-color="light">
+              <img [src]="food.photoUrl" class="w-50" style="height: 166px" />
+              <a href="#!">
+                <div class="mask">
+                  <div class="d-flex justify-content-start align-items-end h-100">
+                    <!-- You can add conditions or other logic for badges here if needed -->
+                    <h5><span class="badge bg-primary ms-2 text-decoration-none ">New</span></h5>
+                  </div>
+                </div>
+                <div class="hover-overlay">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </div>
+              </a>
+            </div>
+            <div class="card-body">
+              <!-- <a href="" class="text-reset"> -->
+                <h5 class="mb-3 text-decoration-none">{{food.categoryName}}</h5>
+              <!-- </a> -->
+              <a href="" class="text-reset text-decoration-none">
+                <p>Category</p>
+              </a>
+              <h6 class="mb-3 text-decoration-none">{{food.price}}₹</h6>
+              <select class="select" (change)="onQuantitySelected($event.target.value)">
+                <option value="0">Quantity</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              
+              <!-- Display the selected quantity (optional) -->
+              <!-- <p *ngIf="selectedQuantity !== null">Selected Quantity: {{ selectedQuantity }}</p> -->
+            </div>
+
+            <!-- Additional details from the second code snippet -->
+            <div class="card-body">
+              <a class="btn btn-danger card-link" (click)="onClc(food.itemID)">Buy Now</a>
+              <!-- <a class="btn btn-info card-link" (click)="onCart(food.itemID)" >Add to Cart</a> -->
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+
+    <!-- More rows and details if needed -->
+  </div>
+</section>
+

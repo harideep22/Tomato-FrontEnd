@@ -1,0 +1,12 @@
+.logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .gradient-text {
+    background: linear-gradient(45deg, #F2385A, #F5A503, #E9F1DF, #56D9CD, #3AA1BF);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 1.5em;
+    margin: 0;
+  }
